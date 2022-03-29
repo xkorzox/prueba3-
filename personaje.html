@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel ="stylesheet" href="estilos.css">
+  <title>Un Personaje</title>
+</head>
+<body>
+<!-- navbar  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Rick and Morty </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Location</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Episode</a>
+        </li>
+      </ul>
+      <form id="formData" class="d-flex">
+        <input class="form-control me-2" id="name" type="search" placeholder="Busca un personaje" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- personajes -->
+
+<div class="container mt-5">
+<<<<<<< HEAD
+  <div class="row" >
+    <div class="col">
+     
+      <!-- imagen -->
+    <img id="imagen">
+    </div>
+    <div class="col">
+      <h2 id="nombre"></h2>
+      <p id="status" ></p>
+      <p id="gender"></p>
+      <p id="species"></p>
+      
+    </div>
+=======
+  <div class="row" id="rowCards">
+    <!-- tarjetas de personajes creadas con javascript -->
+>>>>>>> parent of 16514a8 (Proyecto terminado)
+  </div>
+</div>
+
+
+  <!-- bootstrap javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<<<<<<< HEAD
+
+
+  <script>
+    const parametro = window.location.search;
+    // console.log(parametro) // ?id=1
+    const urlParams = new URLSearchParams(parametro);
+    const ID = urlParams.get('id');
+    
+
+
+    // Funcion para hacer una peticion del personaje por ID
+
+    const getCharacterById = async (ID) => {
+      try {
+        const response = await fetch(`https://rickandmortyapi.com/api/character/${ID}`);
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        throw error;
+      }
+
+    };
+
+    // El llamado a la función 
+       getCharacterById(ID).then( data => {
+      console.log(data);
+      document.getElementById("imagen").setAttribute("src" , data.image)
+      document.getElementById("nombre").innerHTML= data.name
+      document.getElementById("status").innerHTML = data.status
+      document.getElementById("gender").innerHTML = data.gender
+      document.getElementById("species").innerHTML = data.species
+     // document.getElementById("origin").setAttribute = ("src" , data.origin)
+
+    }).catch(err => err);
+  </script>
+=======
+>>>>>>> parent of 16514a8 (Proyecto terminado)
+</body>
+</html>
